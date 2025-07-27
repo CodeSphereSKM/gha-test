@@ -14,3 +14,8 @@ provider "docker" {
 resource "docker_image" "ubuntu" {
   name = "ubuntu:precise"
 }
+
+variable "environment" {
+  description = "The environment to deploy to (e.g., dev, prod)"
+  type        = string
+}
